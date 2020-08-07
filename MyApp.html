@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ToDoApp</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/e989f88264.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/MyApp2.css" />
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50" class="">
+    <nav id="nav11" class="navbar navbar-light bg-dark">
+      <button id="toggleHideNav" type="button" class="btn btn-warning">
+        <i class="fas fa-arrows-alt-h"></i>
+      </button>
+      <h1
+        class="text-light"
+        style="letter-spacing: 20px; font-family: monospace;"
+      >
+        SPHYNX
+      </h1>
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          id="hello"
+        >
+          Hello User
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" type="button">Thông tin</button>
+          <a href="index.html" class="dropdown-item" type="button">Đăng xuất</a>
+        </div>
+      </div>
+    </nav>
+    <div class="d-flex">
+      <nav id="nav1" class="navbar navbar-light font-weight-bold">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <img
+              src="img/116450700_299679618039954_5254107436617988758_n.jpg"
+              alt=""
+              style="width: 100%;"
+            />
+          </li>
+          <li
+            class="nav-item d-flex align-items-center justify-content-center p-0"
+          >
+            <h3 id="title">SPHYNX</h3>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">Công Việc</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Thời Khóa Biểu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">Điểm Số</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="container1">
+        <div
+          id="section1"
+          class="container-fluid"
+          style="padding-top: 70px; padding-bottom: 70px;"
+        >
+          <h1 class="mb-2">Quản Lý Công Việc</h1>
+          <div id="todoContainer">
+            <div id="work" class="bg-warning">
+              <h2 class="text-dark">Need To Do</h2>
+              <div
+                id="workContainer"
+                ondrop="drop(event)"
+                ondragover="allowDrop(event)"
+              >
+                <div
+                  id="drag1"
+                  class="items"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <textarea
+                    class="bg-dark text-light"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="1"
+                    ondrop="noAllowDrop(event)"
+                  >
+Tập thể dục</textarea
+                  >
+                </div>
+                <div
+                  id="drag2"
+                  class="items"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <textarea
+                    class="bg-dark text-light"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="1"
+                    ondrop="noAllowDrop(event)"
+                  >
+Học từ vựng English</textarea
+                  >
+                </div>
+              </div>
+              <button id="addWork" type="button" class="btn btn-dark">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div id="needtodo" class="bg-warning">
+              <h2 class="text-dark">Doing</h2>
+              <div
+                id="ntdContainer"
+                ondrop="drop(event)"
+                ondragover="allowDrop(event)"
+              >
+                <div
+                  class="items"
+                  id="drag3"
+                  class="items"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <textarea
+                    class="bg-dark text-light"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="1"
+                    ondrop="noAllowDrop(event)"
+                  >
+Đánh Răng</textarea
+                  >
+                </div>
+              </div>
+              <button id="addntd" type="button" class="btn btn-dark">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div id="done" class="bg-warning">
+              <h2 class="text-dark">Done</h2>
+              <div
+                id="doneContainer"
+                ondrop="drop(event)"
+                ondragover="allowDrop(event)"
+              >
+                <div
+                  class="items"
+                  id="drag4"
+                  class="items"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <textarea
+                    class="bg-dark text-light"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="1"
+                    ondrop="noAllowDrop(event)"
+                  >
+Làm Bài Tập Về Nhà</textarea
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-danger"
+              id="delete"
+              ondrop="dropDelete(event)"
+              ondragover="allowDrop(event)"
+            >
+              <i class="fas fa-trash-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          id="section2"
+          class="container-fluid"
+          style="padding-top: 70px; padding-bottom: 70px;"
+        >
+          <h1>Thời Khóa Biểu</h1>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" class="pl-2">Time</th>
+                <th scope="col" class="pl-2">Monday</th>
+                <th scope="col" class="pl-2">Tuesday</th>
+                <th scope="col" class="pl-2">Wednesday</th>
+                <th scope="col" class="pl-2">Thursday</th>
+                <th scope="col" class="pl-2">Friday</th>
+                <th scope="col" class="pl-2">Saturday</th>
+                <th scope="col" class="pl-2">Sunday</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyContainer">
+              <tr>
+                <th scope="row">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="1"
+                    rows="1"
+                    class="font-weight-bold"
+                  >
+6:15 - 7:00</textarea
+                  >
+                </th>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">TOÁN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">VẬT LÝ</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">HÓA</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">TOÁN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">VĂN</textarea>
+                </td>
+                <td><textarea name="" id="" cols="1" rows="1">SỬ</textarea></td>
+                <td><textarea name="" id="" cols="1" rows="1"></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="1"
+                    rows="1"
+                    class="font-weight-bold"
+                  >
+7:05 - 7:50</textarea
+                  >
+                </th>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">TOÁN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">VẬT LÝ</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">HÓA</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">TOÁN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">VĂN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">ĐỊA</textarea>
+                </td>
+                <td><textarea name="" id="" cols="1" rows="1"></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="1"
+                    rows="1"
+                    class="font-weight-bold"
+                  >
+7:55 - 8:40</textarea
+                  >
+                </th>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">VĂN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">SINH HỌC</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">GDCD</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">VĂN</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">TIẾNG ANH</textarea>
+                </td>
+                <td>
+                  <textarea name="" id="" cols="1" rows="1">TIẾNG ANH</textarea>
+                </td>
+                <td><textarea name="" id="" cols="1" rows="1"></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="btnContainer">
+            <button id="addrow" class="btn btn-primary">
+              <i class="fas fa-plus"></i>
+            </button>
+            <button id="deleterow" class="btn btn-danger">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          id="section3"
+          class="container-fluid"
+          style="padding-top: 70px; padding-bottom: 70px;"
+        >
+          <h1>Điểm Số</h1>
+          <div id="content">
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/data.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+            <div
+              id="container"
+              style="
+                min-width: 310px;
+                height: 400px;
+                margin: 0px auto;
+                overflow: hidden;
+              "
+              data-highcharts-chart="1"
+            ></div>
+            <table id="datatable">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Expected</th>
+                  <th>Realistic</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>10% Grade</th>
+                  <td class="change">6</td>
+                  <td class="change">5</td>
+                </tr>
+                <tr>
+                  <th>20% Grade</th>
+                  <td class="change">8</td>
+                  <td class="change">5</td>
+                </tr>
+                <tr>
+                  <th>70% Grade</th>
+                  <td class="change" id="2">10</td>
+                  <td class="change" id="1">8</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="popup">
+              <span class="popuptext" id="myPopup" style="display: none;">
+                <label for="changeVal">Nhập điểm: </label>
+                <input type="number" id="changeVal" max="10" min="0" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/MyApp.js"></script>
+  </body>
+</html>

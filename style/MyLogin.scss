@@ -1,0 +1,30 @@
+#formLogin {
+  width: 500px;
+  height: 300px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  padding: 20px;
+  z-index: 2;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  color: white;
+  border-radius: 5px;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(/img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: calc(100% + 100px);
+}
+#title {
+  position: absolute;
+  top: 0px;
+  font-family: monospace;
+  z-index: 4;
+  left: 32.5%;
+  font-size: 100px;
+  letter-spacing: 50px;
+}

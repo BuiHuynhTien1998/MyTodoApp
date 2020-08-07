@@ -1,0 +1,245 @@
+html {
+  scroll-behavior: smooth;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  display: block;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  position: relative;
+}
+body #nav11 {
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+}
+body #nav11 #hello {
+  animation-name: hello1;
+  animation-duration: 1s;
+  opacity: 0;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+@keyframes hello1 {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body #nav1 {
+  letter-spacing: 3px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0px;
+  background-color: #ff9800;
+  height: 100vh;
+  color: black;
+}
+body #nav1 ul {
+  position: sticky;
+  top: 100px;
+}
+body #nav1 ul #title {
+  letter-spacing: 10px;
+  font-family: monospace;
+}
+body #container1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+body #container1 #section1 {
+  width: 100%;
+  min-height: 755px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+body #container1 #section1 #todoContainer {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+}
+body #container1 #section1 #todoContainer #work {
+  margin: 20px;
+  border-radius: 5px;
+  height: fit-content;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #container1 #section1 #todoContainer #work #workContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50px;
+}
+body #container1 #section1 #todoContainer #work #workContainer .items {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+body #container1 #section1 #todoContainer #work #addWork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 20px;
+}
+body #container1 #section1 #todoContainer #needtodo {
+  margin: 20px;
+  border-radius: 5px;
+  height: fit-content;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #container1 #section1 #todoContainer #needtodo #ntdContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 50px;
+}
+body #container1 #section1 #todoContainer #needtodo #ntdContainer .items {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+body #container1 #section1 #todoContainer #needtodo #addntd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 20px;
+}
+body #container1 #section1 #todoContainer #done {
+  margin: 20px;
+  border-radius: 5px;
+  height: fit-content;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #container1 #section1 #todoContainer #done #doneContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80px;
+}
+body #container1 #section1 #todoContainer #done #doneContainer .items {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+body #container1 #section1 #todoContainer #delete {
+  margin: 10px;
+  margin-left: 20px;
+  height: 70px;
+  width: 70px;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+body #container1 #section2 {
+  width: 100%;
+  min-height: 755px;
+  background-color: white;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+body #container1 #section2 textarea {
+  font-size: 15px;
+  text-align: left;
+  overflow: hidden;
+  background-color: transparent;
+  color: black;
+}
+body #container1 #section2 td {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+body #container1 #section2 th {
+  padding-left: 0px;
+}
+body #container1 #section2 #btnContainer {
+  display: flex;
+  width: 100%;
+}
+body #container1 #section2 #btnContainer #addrow {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: auto;
+  margin-left: 30%;
+}
+body #container1 #section2 #btnContainer #deleterow {
+  margin-left: auto;
+  margin-right: 30%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+body #container1 #section3 {
+  width: 100%;
+  min-height: 755px;
+}
+body #container1 #section3 #datatable tr {
+  border-bottom: 1px solid lightgrey;
+}
+body #container1 #section3 #datatable th {
+  padding: 10px 30px;
+}
+body #container1 #section3 #datatable td {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+body #container1 #section3 #datatable td:hover {
+  background-color: #27ae605c;
+}
+body #container1 #section3 #datatable {
+  float: right;
+}
+body #container1 #section3 .popup {
+  position: absolute;
+  right: 250px;
+  bottom: 20px;
+}
+
+/*# sourceMappingURL=MyApp2.css.map */
